@@ -18,11 +18,13 @@ function nvm
 end
 
 # use exa in place of ls: https://github.com/ogham/exa
-function ls
-  exa --group-directories-first $argv
-end
+if command --search exa > /dev/null
+  function ls
+    exa --group-directories-first $argv
+  end
 
-# tree view shortcuts
-function l;   exa --tree --long --level 1 $argv; end
-function ll;  exa --tree --long --level 2 $argv; end
-function lll; exa --tree --long --level 3; end
+  # tree view shortcuts
+  function l;   exa --tree --long --level 1 $argv; end
+  function ll;  exa --tree --long --level 2 $argv; end
+  function lll; exa --tree --long --level 3; end
+end
