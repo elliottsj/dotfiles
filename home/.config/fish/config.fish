@@ -10,7 +10,7 @@ set --universal fish_color_command '6191fc'
 source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 
 # rbenv
-rbenv init - | source
+command --search rbenv > /dev/null; and rbenv init - | source
 
 # nvm
 function nvm
