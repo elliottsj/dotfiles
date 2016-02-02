@@ -26,5 +26,5 @@ if command --search exa > /dev/null
   # tree view shortcuts
   function l;   ls --all --tree --long --level 1 $argv; end
   function ll;  ls --all --tree --long --level 2 $argv; end
-  function lll; ls --all --tree --long --level 3; end
+  function lll; ls --all --tree --long --level 3 $argv; end
 end
