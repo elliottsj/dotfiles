@@ -12,6 +12,9 @@ source "$HOME/.homesick/repos/homeshick/homeshick.fish"
 # rbenv
 command --search rbenv > /dev/null; and rbenv init - | source
 
+# pyenv
+command --search pyenv > /dev/null; and pyenv init - | source
+
 # nvm
 function nvm
   fenv source ~/.nvm/nvm.sh ';' nvm $argv
