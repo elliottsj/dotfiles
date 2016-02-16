@@ -31,3 +31,5 @@ if command --search exa > /dev/null
   function ll;  ls --all --tree --long --level 2 $argv; end
   function lll; ls --all --tree --long --level 3 $argv; end
 end
+
+test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
