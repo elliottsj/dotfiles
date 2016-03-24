@@ -32,4 +32,9 @@ if command --search exa > /dev/null
   function lll; ls --all --tree --long --level 3 $argv; end
 end
 
+# docker-compose shortcut
+function dc
+  docker-compose $argv
+end
+
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
