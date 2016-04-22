@@ -36,5 +36,8 @@ function dc
   docker-compose $argv
 end
 
+# Postgres.app
+set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
+
 # iterm2
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
