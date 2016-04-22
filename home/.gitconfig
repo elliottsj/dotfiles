@@ -33,3 +33,5 @@
 	ui = 1
 [credential]
 	helper = osxkeychain
+[commit]
+	gpgsign = true
