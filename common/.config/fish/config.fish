@@ -1,9 +1,6 @@
 # customize colors
 set --universal fish_color_command '6191fc'
 
-# homeshick
-source "$HOME/.homesick/repos/homeshick/homeshick.fish"
-
 # rbenv
 command --search rbenv > /dev/null; and rbenv init - | source
 
