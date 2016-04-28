@@ -6,9 +6,6 @@
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
-[user]
-	name = Spencer Elliott
-	email = me@elliottsj.com
 [mergetool "Kaleidoscope"]
 [merge]
 [difftool "Kaleidoscope"]
