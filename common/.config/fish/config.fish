@@ -1,6 +1,3 @@
-# customize colors
-set --universal fish_color_command '6191fc'
-
 # rbenv
 command --search rbenv > /dev/null; and rbenv init - | source
 
