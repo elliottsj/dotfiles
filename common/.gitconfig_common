@@ -1,9 +1,32 @@
+[alias]
+	unstage = reset -q HEAD --
+	discard = checkout --
+	nevermind = !git reset --hard HEAD && git clean -d -f
+	uncommit = reset --mixed HEAD~
+	save = commit -m
+	invert = revert
+	last = log -1 HEAD --format=format:"%Cred%H"
+	summary = status -u -s
+	graph = log --graph -10 --branches --remotes --tags	--format=format:'%Cgreen%h %Creset• %<(75,trunc)%s (%cN, %ar) %Cred%d' --date-order
+	history = log -10 --format=format:'%Cgreen%h %Creset• %s (%cN, %ar)'
+	branchout = checkout -b
+	tags = tag
+	branches = branch -a
+	stashes = stash list
+	remotes = remote -v
+	prestage = diff -w --word-diff=color
+	precommit = diff --cached -w --word-diff=color --word-diff-regex='[^[:space:]<>]+'
+	unmerged = branch --no-merged
+	unstash = stash pop
+	untrack = rm -r --cached
+	rewrite = rebase -i
+	amend = commit --amend
 [core]
 	excludesfile = /Users/spencerelliott/.gitignore_global
 	editor = atom --wait
 [difftool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff -w \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /usr/local/bin/ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
 	trustExitCode = true
