@@ -21,6 +21,11 @@ function dc
   docker-compose $argv
 end
 
+# gitup shortcut
+function gu
+  cd $argv[1]; and gitup
+end
+
 # Postgres.app
 set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
 
