@@ -23,7 +23,8 @@ end
 
 # gitup shortcut
 function gu
-  cd $argv[1]; and gitup
+  pushd $argv[1]; and gitup
+  popd
 end
 
 # Postgres.app
