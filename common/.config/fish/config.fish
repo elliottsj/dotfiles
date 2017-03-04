@@ -1,3 +1,13 @@
+# Postgres.app
+if test -d /Applications/Postgres.app
+  set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
+end
+
+# TeX
+if test -d /Library/TeX/texbin
+  set PATH /Library/TeX/texbin $PATH
+end
+
 # rbenv
 command --search rbenv > /dev/null; and rbenv init - | source
 
@@ -25,16 +35,6 @@ end
 function gu
   pushd $argv[1]; and gitup
   popd
-end
-
-# Postgres.app
-if test -d /Applications/Postgres.app
-  set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
-end
-
-# TeX
-if test -d /Library/TeX/texbin
-  set PATH /Library/TeX/texbin $PATH
 end
 
 # iterm2
