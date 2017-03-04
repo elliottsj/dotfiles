@@ -1,3 +1,8 @@
+# Cargo (Rust)
+if test -d $HOME/.cargo/bin
+  set PATH $HOME/.cargo/bin $PATH
+end
+
 # Postgres.app
 if test -d /Applications/Postgres.app
   set PATH /Applications/Postgres.app/Contents/Versions/latest/bin $PATH
