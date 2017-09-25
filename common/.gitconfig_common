@@ -52,7 +52,5 @@
 	prompt = false
 [color]
 	ui = 1
-[credential]
-	helper = osxkeychain
 [commit]
 	gpgsign = false
