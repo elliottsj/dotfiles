@@ -1,3 +1,6 @@
+# Set VSCode as default editor
+set -x EDITOR code
+
 # Cargo (Rust)
 if test -d $HOME/.cargo/bin
   set PATH $HOME/.cargo/bin $PATH
