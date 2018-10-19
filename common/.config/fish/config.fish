@@ -1,3 +1,6 @@
+# Homebrew sbin
+set PATH "/usr/local/sbin" $PATH
+
 # Set VSCode as default editor
 set -x EDITOR code
 
