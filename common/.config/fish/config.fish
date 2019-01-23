@@ -4,6 +4,11 @@ set PATH "/usr/local/sbin" $PATH
 # Set VSCode as default editor
 set -x EDITOR code
 
+# User-scoped binaries
+if test -d $HOME/bin
+  set PATH $HOME/bin $PATH
+end
+
 # Cargo (Rust)
 if test -d $HOME/.cargo/bin
   set PATH $HOME/.cargo/bin $PATH
