@@ -9,6 +9,12 @@ if test -d $HOME/bin
   set PATH $HOME/bin $PATH
 end
 
+# fnm
+if test -d $HOME/.fnm/current/bin
+  set PATH $HOME/.fnm $PATH
+  eval (fnm env --multi --fish)
+end
+
 # Cargo (Rust)
 if test -d $HOME/.cargo/bin
   set PATH $HOME/.cargo/bin $PATH
