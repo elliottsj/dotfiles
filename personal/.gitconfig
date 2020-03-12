@@ -3,14 +3,3 @@
 [user]
 	name = Spencer Elliott
 	email = me@elliottsj.com
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
-[core]
-	commitGraph = true
-[gc]
-	writeCommitGraph = true
-[alias]
-	lg = log --oneline --graph

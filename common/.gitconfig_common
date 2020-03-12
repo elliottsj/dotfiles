@@ -22,7 +22,7 @@
 	rewrite = rebase -i
 	amend = commit --amend
 [core]
-	excludesfile = /Users/spencerelliott/.gitignore_global
+	excludesfile = .gitignore_global
 	editor = code --wait
 [push]
 	default = simple

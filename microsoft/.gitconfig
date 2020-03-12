@@ -1,5 +1,0 @@
-[include]
-	path = .gitconfig_common
-[user]
-	name = Spencer Elliott
-	email = spelliot@microsoft.com
