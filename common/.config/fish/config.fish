@@ -67,3 +67,8 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 # direnv
 eval (direnv hook fish)
+
+# delete all local git branches which have been merged into master
+function git-delete-merged
+  git branch --merged master | grep -v "master" | xargs git branch -d
+end
