@@ -1,3 +1,6 @@
+# Yolk
+set -x YOLK_REPOS_PATH "/Users/spencerelliott/Dev/Yolk-HQ"
+
 # Homebrew sbin
 set PATH "/usr/local/sbin" $PATH
 
