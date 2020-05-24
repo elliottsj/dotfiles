@@ -3,3 +3,5 @@
 [user]
 	name = Spencer Elliott
 	email = me@elliottsj.com
+[core]
+	excludesfile = /Users/spencerelliott/.gitignore_global
