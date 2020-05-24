@@ -72,3 +72,8 @@ eval (direnv hook fish)
 function git-delete-merged
   git branch --merged master | grep -v "master" | xargs git branch -d
 end
+
+# nx
+function nx --description 'Alias for pnpm run nx --'
+  pnpm run nx -- $argv
+end
