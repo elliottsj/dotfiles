@@ -5,3 +5,5 @@
 	email = me@elliottsj.com
 [core]
 	excludesfile = /Users/spencerelliott/.gitignore_global
+[pull]
+	ff = only
