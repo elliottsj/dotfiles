@@ -1,21 +1,21 @@
 # Yolk
 set -x YOLK_REPOS_PATH "/Users/spencerelliott/Dev/Yolk-HQ"
 
-# Homebrew sbin
-set PATH "/usr/local/sbin" $PATH
-
 # Set VSCode as default editor
 set -x EDITOR code
 
 # User-scoped binaries
-if test -d $HOME/bin
+if test -d "$HOME/bin"
   set PATH $HOME/bin $PATH
 end
 
-# fnm
-if test -d $HOME/.fnm/current/bin
-  set PATH $HOME/.fnm $PATH
-  eval (fnm env --multi --fish)
+# starship
+command --search starship > /dev/null; and starship init fish | source
+
+# volta
+if test -d "$HOME/.volta/bin"
+  set -x VOLTA_HOME "$HOME/.volta"
+  set PATH "$VOLTA_HOME/bin" $PATH
 end
 
 # Cargo (Rust)
@@ -49,11 +49,6 @@ if command --search exa > /dev/null
   function l;   ls --all --tree --long --level 1 $argv; end
   function ll;  ls --all --tree --long --level 2 $argv; end
   function lll; ls --all --tree --long --level 3 $argv; end
-end
-
-# docker-compose shortcut
-function dc
-  docker-compose $argv
 end
 
 # gitup shortcut
