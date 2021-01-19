@@ -1,2 +1,8 @@
 */.ssh/id_*
 */.ssh/known_hosts
+
+# Generated fish config
+*/.config/fish/completions
+*/.config/fish/conf.d
+*/.config/fish/fish_variables
+*/.config/fish/functions

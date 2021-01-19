@@ -1,3 +1,8 @@
+# Homebrew
+if test -d /opt/homebrew/bin
+  eval (/opt/homebrew/bin/brew shellenv)
+end
+
 # Yolk
 set -x YOLK_REPOS_PATH "/Users/spencerelliott/Dev/Yolk-HQ"
 
