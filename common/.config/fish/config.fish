@@ -4,7 +4,7 @@ if test -d /opt/homebrew/bin
 end
 
 # Yolk
-set -x YOLK_REPOS_PATH "/Users/spencerelliott/Dev/Yolk-HQ"
+set -x YOLK_REPOS_PATH "/Users/spencerelliott/dev/Yolk-HQ"
 
 # Set VSCode as default editor
 set -x EDITOR code
