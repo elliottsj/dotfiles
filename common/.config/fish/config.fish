@@ -7,7 +7,7 @@ end
 set -x YOLK_REPOS_PATH "/Users/spencerelliott/dev/Yolk-HQ"
 
 # Set VSCode as default editor
-set -x EDITOR code
+set -x EDITOR "code --wait"
 
 # User-scoped binaries
 if test -d "$HOME/bin"
