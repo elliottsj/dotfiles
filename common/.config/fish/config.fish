@@ -3,9 +3,6 @@ if test -d /opt/homebrew/bin
   eval (/opt/homebrew/bin/brew shellenv)
 end
 
-# Yolk
-set -x YOLK_REPOS_PATH "/Users/spencerelliott/dev/Yolk-HQ"
-
 # Set VSCode as default editor
 set -x EDITOR "code --wait"
 
@@ -78,4 +75,15 @@ end
 # nx
 function nx --description 'Alias for pnpm run nx --'
   pnpm run nx -- $argv
+end
+
+# golang
+if test -d "/opt/homebrew/opt/go@1.17"
+  fish_add_path "/opt/homebrew/opt/go@1.17/bin"
+end
+
+if test -d "$HOME/go"
+  set -x GOPATH ~/go
+  set -x GOBIN ~/go/bin
+  fish_add_path $GOBIN
 end
