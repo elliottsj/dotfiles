@@ -1,0 +1,9 @@
+[include]
+	path = .gitconfig_common
+[user]
+	name = Spencer Elliott
+	email = spencer@cohere.com
+[core]
+	excludesfile = /Users/spencerelliott/.gitignore_global
+[pull]
+	ff = only
