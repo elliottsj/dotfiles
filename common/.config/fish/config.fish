@@ -87,3 +87,8 @@ if test -d "$HOME/go"
   set -x GOBIN ~/go/bin
   fish_add_path $GOBIN
 end
+
+# pnpm
+set -gx PNPM_HOME "/Users/spencerelliott/Library/pnpm"
+set -gx PATH "$PNPM_HOME" $PATH
+# pnpm end
