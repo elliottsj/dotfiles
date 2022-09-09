@@ -92,3 +92,8 @@ end
 set -gx PNPM_HOME "/Users/spencerelliott/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
+
+# zoxide
+if command --search zoxide > /dev/null
+  zoxide init fish | source
+end
