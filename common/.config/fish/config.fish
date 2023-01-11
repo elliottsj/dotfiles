@@ -88,6 +88,10 @@ if test -d "$HOME/go"
   fish_add_path $GOBIN
 end
 
+if test -d "/opt/homebrew/opt/skaffold@1.39/bin"
+  fish_add_path "/opt/homebrew/opt/skaffold@1.39/bin"
+end
+
 # pnpm
 set -gx PNPM_HOME "/Users/spencerelliott/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
