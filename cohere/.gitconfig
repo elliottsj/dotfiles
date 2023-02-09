@@ -7,3 +7,9 @@
 	excludesfile = /Users/spencerelliott/.gitignore_global
 [pull]
 	ff = only
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
