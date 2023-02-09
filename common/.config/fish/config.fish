@@ -93,7 +93,7 @@ if test -d "/opt/homebrew/opt/skaffold@1.39/bin"
 end
 
 # pnpm
-set -gx PNPM_HOME "/Users/spencerelliott/Library/pnpm"
+set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
