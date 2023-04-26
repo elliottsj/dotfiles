@@ -92,12 +92,17 @@ if test -d "/opt/homebrew/opt/skaffold@1.39/bin"
   fish_add_path "/opt/homebrew/opt/skaffold@1.39/bin"
 end
 
+# zoxide
+if command --search zoxide > /dev/null
+  zoxide init fish | source
+end
+
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 set -gx PATH "$PNPM_HOME" $PATH
 # pnpm end
 
-# zoxide
-if command --search zoxide > /dev/null
-  zoxide init fish | source
+# gcloud
+if command --search gcloud > /dev/null
+  source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 end
