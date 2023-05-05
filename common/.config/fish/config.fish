@@ -106,3 +106,8 @@ set -gx PATH "$PNPM_HOME" $PATH
 if command --search gcloud > /dev/null
   source "$(brew --prefix)/share/google-cloud-sdk/path.fish.inc"
 end
+
+# postgres
+if test -d "/opt/homebrew/opt/libpq/bin"
+  fish_add_path "/opt/homebrew/opt/libpq/bin"
+end
