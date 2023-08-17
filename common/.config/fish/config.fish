@@ -39,7 +39,10 @@ end
 command --search rbenv > /dev/null; and rbenv init - | source
 
 # pyenv
-command --search pyenv > /dev/null; and pyenv init --path | source
+if command --search pyenv > /dev/null
+  set -x PYENV_ROOT $HOME/.pyenv
+  pyenv init - | source
+end
 
 # use exa in place of ls: https://github.com/ogham/exa
 if command --search exa > /dev/null
