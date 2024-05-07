@@ -44,10 +44,10 @@ if command --search pyenv > /dev/null
   pyenv init - | source
 end
 
-# use exa in place of ls: https://github.com/ogham/exa
-if command --search exa > /dev/null
+# use eza in place of ls: https://github.com/eza-community/eza
+if command --search eza > /dev/null
   function ls
-    exa --group-directories-first $argv
+    eza --group-directories-first $argv
   end
 
   # tree view shortcuts
