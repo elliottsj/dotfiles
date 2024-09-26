@@ -116,3 +116,6 @@ end
 if test -d "/opt/homebrew/opt/libpq/bin"
   fish_add_path "/opt/homebrew/opt/libpq/bin"
 end
+
+# uv
+fish_add_path "/Users/spencer/.local/bin"
