@@ -23,7 +23,7 @@
 	amend = commit --amend
 [core]
 	excludesfile = .gitignore_global
-	editor = code --wait
+	editor = cursor --wait
 [push]
 	default = simple
 [color]
@@ -31,10 +31,14 @@
 [commit]
 	gpgsign = false
 [merge]
-	tool = vscode
+	tool = cursor
+[diff]
+	tool = cursor
 [mergetool "vscode"]
 	cmd = code --wait $MERGED
-[diff]
-	tool = vscode
 [difftool "vscode"]
 	cmd = code --wait --diff $LOCAL $REMOTE
+[mergetool "cursor"]
+	cmd = cursor --wait $MERGED
+[difftool "cursor"]
+	cmd = cursor --wait --diff $LOCAL $REMOTE
