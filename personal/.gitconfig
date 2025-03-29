@@ -7,3 +7,5 @@
 	excludesfile = /Users/spencerelliott/.gitignore_global
 [pull]
 	ff = only
+[init]
+	defaultBranch = main
