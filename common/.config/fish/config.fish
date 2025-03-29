@@ -91,15 +91,6 @@ if test -d "$HOME/go"
   fish_add_path $GOBIN
 end
 
-if test -d "/opt/homebrew/opt/skaffold@1.39/bin"
-  fish_add_path "/opt/homebrew/opt/skaffold@1.39/bin"
-end
-
-# zoxide
-if command --search zoxide > /dev/null
-  zoxide init fish | source
-end
-
 # pnpm
 set -gx PNPM_HOME "$HOME/Library/pnpm"
 if not string match -q -- $PNPM_HOME $PATH
