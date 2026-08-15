@@ -75,11 +75,6 @@ function git-delete-merged
   git branch --merged master | grep -v "master" | xargs git branch -d
 end
 
-# nx
-function nx --description 'Alias for pnpm run nx --'
-  pnpm run nx -- $argv
-end
-
 # golang
 if test -d "/opt/homebrew/opt/go@1.17"
   fish_add_path "/opt/homebrew/opt/go@1.17/bin"
@@ -90,13 +85,6 @@ if test -d "$HOME/go"
   set -x GOBIN ~/go/bin
   fish_add_path $GOBIN
 end
-
-# pnpm
-set -gx PNPM_HOME "$HOME/Library/pnpm"
-if not string match -q -- $PNPM_HOME $PATH
-  set -gx PATH "$PNPM_HOME" $PATH
-end
-# pnpm end
 
 # gcloud
 if command --search gcloud > /dev/null
@@ -117,3 +105,10 @@ source ~/.orbstack/shell/init2.fish 2>/dev/null || :
 
 # uv
 fish_add_path "/Users/spencerelliott/.local/bin"
+
+# pnpm
+set -gx PNPM_HOME "/Users/spencerelliott/Library/pnpm"
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+  set -gx PATH "$PNPM_HOME/bin" $PATH
+end
+# pnpm end
