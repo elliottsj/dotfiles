@@ -63,7 +63,7 @@ function gu
 end
 
 # direnv
-eval (direnv hook fish)
+direnv hook fish | source
 
 # helm
 if command --search helm > /dev/null
